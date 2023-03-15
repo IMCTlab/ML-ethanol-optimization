@@ -17,5 +17,5 @@ Raw data required for analysis are deposited in this repository and in supplemen
 * [ggplot2](https://ggplot2.tidyverse.org/)
 * [ggpubr](https://cran.r-project.org/web/packages/ggpubr/index.html)
 * [reshape2](https://cran.r-project.org/web/packages/reshape2/index.html)
-* [dplyr]([https://dplyr.tidyverse.org/](https://github.com/tidyverse/dplyr)
+* [dplyr](https://github.com/tidyverse/dplyr)
 * [readxl](https://readxl.tidyverse.org/)
