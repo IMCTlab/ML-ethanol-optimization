@@ -8,7 +8,7 @@ Overall, we used XGBoost to train the model for predicting ethanol production in
 All analysis were performed under R version 4.1.1
 
 ## Data availability
-Raw data required for analysis are deposited in this repository and in supplementary materials in the publication.
+Raw data required for analysis are deposited on this repository and can be found at supplementary materials in the publication.
 
 ## R Packages in the analysis
 * [caret](https://topepo.github.io/caret/)
