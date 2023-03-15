@@ -12,4 +12,10 @@ All analysis were performed under R version 4.1.1
 Raw data required for analysis are deposited in this repository and in supplementary materials in the publication.
 
 ## R Packages in the analysis
-* [carat](https://topepo.github.io/caret/)
+* [caret](https://topepo.github.io/caret/)
+* [xgboost](https://xgboost.readthedocs.io/en/stable/)
+* [ggplot2](https://ggplot2.tidyverse.org/)
+* [ggpubr](https://cran.r-project.org/web/packages/ggpubr/index.html)
+* [reshape2](https://cran.r-project.org/web/packages/reshape2/index.html)
+* [dplyr]([https://dplyr.tidyverse.org/](https://github.com/tidyverse/dplyr))
+* [readxl](https://readxl.tidyverse.org/)
