@@ -4,7 +4,8 @@
 This repository represents machine learning (ML) script used in the publication ""
 
 Overall, we used XGBoost to train the model for predicting ethanol production in the combinatorial yeasts. 
-We searched for suitable ML algorithms uisng the "caret" packages, and XGBoost was usd for comprehensive model training.
+
+We searched for suitable ML algorithms uisng the caret package, and XGBoost was usd for comprehensive model training.
 
 All analysis were performed under R version 4.1.1
 
