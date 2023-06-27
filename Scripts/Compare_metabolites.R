@@ -8,7 +8,6 @@ library(dplyr)
 
 #Visualization 
 # 40 C set1
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/4042C/raw")
 
 C40=read_xlsx("Summary 40 42 oC_innova.xlsx")
 C40_1=C40[-1,-c(3,5,7,9,11,13)] #cut 18h columns
@@ -33,7 +32,6 @@ colnames(Asd)=c("Name","OD600","EtOH(g/L)","%Glucose consumption",
 
 
 ### 40C set2
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/40C_21sep22")
 
 C40=read_xlsx("Summary 40 oC 24h 0.25OD starter Innova EQS 21-09-2022.xlsx")
 C40_2=C40[-c(1:3),]
@@ -64,7 +62,6 @@ C=C[-10,]  #remove xxx(WT) from setA
 
 #Visualization 
 #rep1 30 C
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/30C/raw/")
 dat=read_xlsx("Metabolite and growth data_Day 1 and 2.xlsx", sheet = 1)
 #define column name
 colnames(dat)=c("Name","A600_24h","A600_24h_std","A600_48h","A600_48h_std",
