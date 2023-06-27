@@ -12,7 +12,7 @@ library(reshape2)
 #scale promoter strengths 
 #40C
 
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/37C40C/")
+
 prost2_40=read.table("Promoterstrength_40C_vectornorm_19072022.txt")
 rownames(prost2_40)=c("vector","PDC1","ADH1","TPS1","ACT1",
                       "PGK1","ENO2","TDH3","YEF3")
@@ -34,7 +34,7 @@ ggplot(m4,aes(promoter, promoterstrength, fill=promoter))+
 
 #productions data 
 # 40 C set1
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/4042C/raw")
+
 
 C40=read_xlsx("Summary 40 42 oC_innova.xlsx")
 C40_1=C40[-1,-c(3,5,7,9,11,13)] #cut 18h columns
@@ -59,7 +59,6 @@ colnames(Asd)=c("Name","OD600","EtOH(g/L)","%Glucose consumption",
 
 
 ### 40C set2
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/40C_21sep22")
 
 C40=read_xlsx("Summary 40 oC 24h 0.25OD starter Innova EQS 21-09-2022.xlsx")
 C40_2=C40[-c(1:3),]
@@ -87,7 +86,7 @@ C=C[-10,]  #remove xxx(WT) from setA
 
 #add promoter strength
 #import label from P'Wut
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/30C")
+
 lb=read.csv("input_AI_Guided.csv")
 colnames(lb)[1]="Name"
 lb1=lb[,c(1,3,4,5)]
@@ -349,12 +348,7 @@ candi=pre_EtOH[pre_EtOH$Name%in%inter_pre,][1:15,]
 candi=left_join(candi, pre_OD[,c(1,8)], by="Name")
 candi=left_join(candi, pre_Glu[,c(1,8)], by="Name")
 
-setwd("D:/BIOTEC NSTDA/ML_ethanol/ML_ethanol_allnew/Table")
-write.table(candi,"Prediction_usingTuned40C_EtOH_XGBoostmodel_tunedmodel_25102022.txt")
-candi=read.table("Prediction_usingTuned40C_EtOH_XGBoostmodel_tunedmodel_25102022.txt")
 
-library(writexl)
-write_xlsx(candi, path="Prediction_usingTuned40C_EtOH_XGBoostmodel_tunedmodel_25102022.xlsx")
 
 
 library(VennDiagram)
