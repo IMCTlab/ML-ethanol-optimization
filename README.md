@@ -1,9 +1,10 @@
 # ML-ethanol-optimization
 
 ## Description 
-This repository represents the machine learning (ML) script used in the publication ""
+This repository represents the machine learning (ML) scripts used in the publication "Optimizing Ethanol Production in Saccharomyces cerevisiae at Ambient and Elevated Temperatures through Machine Learning-Guided Combinatorial Promoter Modifications"
 
-Overall, we used XGBoost to train the model for predicting ethanol production in combinatorial yeasts. We searched for suitable ML algorithms using the caret package, and XGBoost was used for comprehensive model training.
+Overall, we used XGBoost to train the model for predicting ethanol production in combinatorial yeasts. 
+We first searched for suitable ML algorithms using the caret package, and XGBoost was used for comprehensive model training.
 
 All analyses were performed under R version 4.1.1
 
