@@ -8,8 +8,6 @@ library(dplyr)
 
 #Visualization 
 # 40 C set1
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/4042C/raw")
-
 C40=read_xlsx("Summary 40 42 oC_innova.xlsx")
 C40_1=C40[-1,-c(3,5,7,9,11,13)] #cut 18h columns
 colnames(C40_1)[1]="Group"
@@ -33,7 +31,6 @@ colnames(Asd)=c("Name","STD_OD600","STD_EtOH(g/L)","STD_%Glucose consumption",
 
 
 ### 40C set2
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/40C_21sep22")
 
 C40=read_xlsx("Summary 40 oC 24h 0.25OD starter Innova EQS 21-09-2022.xlsx")
 C40_2=C40[-c(1:3),]
@@ -61,10 +58,6 @@ C=C[-10,]  #remove xxx(WT) from setA
 Csd=rbind(Asd,Bsd)
 Csd=Csd[-10,]  #remove xxx(WT) from setA
 
-All=cbind(C,Csd)
-All1=All[,c(1,2,10,3,11,4,12,5,13,6,14,7,15,8,16)]
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Manuscript2023/Figure/Table")
-writexl::write_xlsx(All1, path =  "Rawdata_40CEthanolandMetabolites.xlsx")
 
 ####  plot2 #EtOH (g/L/OD600) vs other 
 p1=ggplot(C, aes(`EtOH(g/L/OD600)`, OD600, color=Name, label=Name))+
