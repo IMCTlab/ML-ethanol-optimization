@@ -13,7 +13,7 @@ library(reshape2)
 pro_str=read.table("Metabolic_promoterstrength_forML__08092022.txt")
 
 #productions data 
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/30C/raw/")
+
 dat=read_xlsx("Metabolite and growth data_Day 1 and 2.xlsx", sheet = 1)
 #define column name
 colnames(dat)=c("Name","A600_24h","A600_24h_std","A600_48h","A600_48h_std",
@@ -224,8 +224,7 @@ preds_xgb%>%ggplot(aes(x=Actual, y=Predicted))+
 pretable=cbind(eth_str[-A,1],preds_xgb)
 pretable=pretable[,c(1,3,2)]
 colnames(pretable)=c("Name","Preiction","Actual")
-setwd("D:/BIOTEC NSTDA/ML_ethanol/ML_ethanol_allnew/Table")
-write.table(pretable,"Prediction_vs_actual_ethanol_30Cmodel.txt",sep = "\t")
+
 
 #plot tree
 xgb.plot.tree(feature_names = names(train_df), model = xgb, 
