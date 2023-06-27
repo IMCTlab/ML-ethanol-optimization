@@ -12,10 +12,10 @@ rm(list=ls())
 ### 1. Import data  ###
 #scale promoter strengths 
 #data contain scale of all metabolites and promoter strengths every timepoints
-pro_str=read.table("D:/BIOTEC NSTDA/ML_ethanol/Results/30C/table_scalenocenter/Metabolic_promoterstrength_forML__08092022.txt")
+pro_str=read.table("/Metabolic_promoterstrength_forML__08092022.txt")
 
 #productions data 
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/30C/raw/")
+
 dat=read_xlsx("Metabolite and growth data_Day 1 and 2.xlsx", sheet = 1)
 #define column name
 colnames(dat)=c("Name","A600_24h","A600_24h_std","A600_48h","A600_48h_std",
@@ -104,8 +104,6 @@ tSplit[nx,8]=svm2$MAE
 
 }
 
-setwd("D:/BIOTEC NSTDA/ML_ethanol/ML_ethanol_allnew/Table")
-write.csv(tSplit, "Allexplore_Mutiple_train-test_split_SVM_310523.csv")
 
 
 ################### ML algorithms  ##############################
