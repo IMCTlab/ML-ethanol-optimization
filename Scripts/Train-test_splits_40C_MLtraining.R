@@ -8,11 +8,10 @@ library(reshape2)
 
 rm(list=ls())
 ### High temperature ###
-# 40 C ---- 11.10.2022 ----
+
 ### 1. Import data  ###
 #scale promoter strengths 
 #40C
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/37C40C/")
 prost2_40=read.table("Promoterstrength_40C_vectornorm_19072022.txt")
 rownames(prost2_40)=c("vector","PDC1","ADH1","TPS1","ACT1",
                       "PGK1","ENO2","TDH3","YEF3")
@@ -22,8 +21,6 @@ colnames(sprost40)=c("promoter","promoterstrength")
 
 #productions data 
 # 40 C set1
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/4042C/raw")
-
 C40=read_xlsx("Summary 40 42 oC_innova.xlsx")
 C40_1=C40[-1,-c(3,5,7,9,11,13)] #cut 18h columns
 colnames(C40_1)[1]="Group"
@@ -47,8 +44,6 @@ colnames(Asd)=c("Name","OD600","EtOH(g/L)","%Glucose consumption",
 
 
 ### 40C set2
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/40C_21sep22")
-
 C40=read_xlsx("Summary 40 oC 24h 0.25OD starter Innova EQS 21-09-2022.xlsx")
 C40_2=C40[-c(1:3),]
 C40_2=C40_2[,c(1,2,3,5,6,7,8)]
@@ -78,7 +73,6 @@ C=C[-c(10,27),]  #remove xxx(WT) from setA and B
 #setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/4042C_veridation_29dec22/")
 #V40=read_xlsx("Summary Predicted 15 clones 40 oC 24h (3rd flr EQS).xlsx")
 
-setwd("D:/BIOTEC NSTDA/ML_ethanol/Results/4042C_validation_13Jan23/")
 V40=read_xlsx("Summary 15 Predicted Strains 40 oC 0.25OD starter 24h Innova EQS 2nd flr (3rd repeat)06-01-2023.xlsx")
 
 V40_1=V40[-c(1,2,3,4),-5] #cut 18h columns
