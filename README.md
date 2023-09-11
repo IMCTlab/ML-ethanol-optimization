@@ -3,7 +3,7 @@
 ## Description 
 This repository represents the machine learning (ML) scripts used in the publication 
 "Optimizing Ethanol Production in Saccharomyces cerevisiae at Ambient and Elevated Temperatures through Machine Learning-Guided Combinatorial Promoter Modifications" 
-*(https://pubs.acs.org/doi/full/10.1021/acssynbio.3c00199)
+(https://pubs.acs.org/doi/full/10.1021/acssynbio.3c00199)
 
 Overall, we used XGBoost to train the ML model for predicting ethanol production using ethanol and promoter strengths as input.
 We first searched for suitable ML algorithms using the caret package, and XGBoost was used for comprehensive model training.
